@@ -67,19 +67,19 @@ $peliculas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="carousel-item active">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/watch?v=tA_qMdzvCvk&ab_channel=20thCenturyStudiosLA" title="TItanic" allowfullscreen></iframe>
+        <iframe width="791" height="331" src="https://www.youtube.com/embed/tA_qMdzvCvk" title="Titanic | Re-estreno | Tráiler Oficial Subtitulado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
 
     <div class="carousel-item">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/watch?v=90dWVETAdtI&ab_channel=TrailersyEstrenos" title="Parasitos" allowfullscreen></iframe>
+      <iframe width="791" height="331" src="https://www.youtube.com/embed/90dWVETAdtI" title="Parásitos - Trailer español (HD)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
 
     <div class="carousel-item">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/watch?v=iOyQx7MXaz0&ab_channel=PARAMOUNTPICTURESM%C3%89XICO" title="El Padrino" allowfullscreen></iframe>
+        <iframe width="791" height="331" src="https://www.youtube.com/embed/iOyQx7MXaz0" title="El Padrino: 50 años  - Tráiler oficial - Descúbrela en cines, febrero 24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
 
