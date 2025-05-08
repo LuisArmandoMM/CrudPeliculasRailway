@@ -1,7 +1,7 @@
 <?php
-require_once 'db.php';
+include 'db.php';
 $id = $_GET['id'];
-$conn->query("DELETE FROM peliculas WHERE id = $id");
+$stmt = $conn->prepare("DELETE FROM peliculas WHERE id = ?");
+$stmt->execute([$id]);
 header("Location: index.php");
-exit;
 ?>

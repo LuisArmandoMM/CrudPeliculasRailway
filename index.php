@@ -1,43 +1,34 @@
 <?php
-require_once 'db.php';
-$result = $conn->query("SELECT * FROM peliculas");
+include 'db.php';
+$stmt = $conn->query("SELECT * FROM peliculas ORDER BY id DESC");
+$peliculas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CRUD Películas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Películas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-<div class="container mt-5">
-    <h1 class="mb-4">Películas</h1>
-    <a href="nueva.php" class="btn btn-success mb-3">Añadir Película</a>
-    <table class="table table-bordered">
-        <thead class="table-dark">
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Año</th>
-                <th>Director</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
+<body class="container mt-5">
+    <h1>Listado de Películas</h1>
+    <a href="nueva.php" class="btn btn-success mb-3">Agregar nueva película</a>
+    <table class="table table-striped">
+        <thead><tr><th>ID</th><th>Nombre</th><th>Año</th><th>Director</th><th>Acciones</th></tr></thead>
         <tbody>
-        <?php while($row = $result->fetch_assoc()): ?>
+            <?php foreach ($peliculas as $p): ?>
             <tr>
-                <td><?= $row['id'] ?></td>
-                <td><?= $row['nombre'] ?></td>
-                <td><?= $row['anio'] ?></td>
-                <td><?= $row['director'] ?></td>
+                <td><?= $p['id'] ?></td>
+                <td><?= htmlspecialchars($p['nombre']) ?></td>
+                <td><?= $p['anio'] ?></td>
+                <td><?= htmlspecialchars($p['director']) ?></td>
                 <td>
-                    <a href="editar.php?id=<?= $row['id'] ?>" class="btn btn-primary btn-sm">Editar</a>
-                    <a href="eliminar.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
+                    <a href="editar.php?id=<?= $p['id'] ?>" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="eliminar.php?id=<?= $p['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
                 </td>
             </tr>
-        <?php endwhile; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
-</div>
 </body>
 </html>

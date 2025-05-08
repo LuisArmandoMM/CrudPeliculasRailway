@@ -1,12 +1,14 @@
 <?php
-$host = getenv("MYSQLHOST") ?: "localhost";
-$port = getenv("MYSQLPORT") ?: "3306";
-$user = getenv("MYSQLUSER") ?: "root";
-$password = getenv("MYSQLPASSWORD") ?: "";
-$database = getenv("MYSQLDATABASE") ?: "crud";
+$host = getenv("PGHOST") ?: "localhost";
+$port = getenv("PGPORT") ?: "5432";
+$user = getenv("PGUSER") ?: "postgres";
+$password = getenv("PGPASSWORD") ?: "";
+$database = getenv("PGDATABASE") ?: "crud";
 
-$conn = new mysqli($host, $user, $password, $database, $port);
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+try {
+    $conn = new PDO("pgsql:host=$host;port=$port;dbname=$database", $user, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Conexión fallida: " . $e->getMessage());
 }
 ?>
