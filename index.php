@@ -60,5 +60,36 @@ $peliculas = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <?php endforeach; ?>
     </tbody>
   </table>
+
+  <div id="trailerCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/YoHD9XEInc0" title="Inception Trailer" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/EXeTwQWrcwY" title="The Dark Knight Trailer" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8" title="Avengers: Infinity War Trailer" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#trailerCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#trailerCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 </body>
 </html>
