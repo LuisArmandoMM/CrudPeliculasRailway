@@ -67,19 +67,19 @@ $peliculas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="carousel-item active">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/YoHD9XEInc0" title="Inception Trailer" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/watch?v=tA_qMdzvCvk&ab_channel=20thCenturyStudiosLA" title="TItanic" allowfullscreen></iframe>
       </div>
     </div>
 
     <div class="carousel-item">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/EXeTwQWrcwY" title="The Dark Knight Trailer" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/watch?v=90dWVETAdtI&ab_channel=TrailersyEstrenos" title="Parasitos" allowfullscreen></iframe>
       </div>
     </div>
 
     <div class="carousel-item">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8" title="Avengers: Infinity War Trailer" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/watch?v=iOyQx7MXaz0&ab_channel=PARAMOUNTPICTURESM%C3%89XICO" title="El Padrino" allowfullscreen></iframe>
       </div>
     </div>
 
