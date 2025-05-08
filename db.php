@@ -1,9 +1,9 @@
 <?php
-$host = getenv("PGHOST") ?: "localhost";
+$host = getenv("PGHOST") ?: "dpg-d0eg28h5pdvs73am6k70-a";
 $port = getenv("PGPORT") ?: "5432";
-$user = getenv("PGUSER") ?: "postgres";
-$password = getenv("PGPASSWORD") ?: "";
-$database = getenv("PGDATABASE") ?: "crud";
+$user = getenv("PGUSER") ?: "user";
+$password = getenv("PGPASSWORD") ?: "FFKkiZNouu5kJB1bdGwbeFz7UnJ5NX6y";
+$database = getenv("PGDATABASE") ?: "moviesdb_qwm7";
 
 try {
     $conn = new PDO("pgsql:host=$host;port=$port;dbname=$database", $user, $password);
