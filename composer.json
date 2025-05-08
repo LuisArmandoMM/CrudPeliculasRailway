@@ -1,0 +1,5 @@
+{
+  "name": "luis/crud-peliculas",
+  "description": "CRUD de películas con PHP y MySQL",
+  "require": {}
+}
