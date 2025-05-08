@@ -53,6 +53,9 @@ $peliculas = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <td>
             <a href="eliminar.php?id=<?= $p['id'] ?>" class="btn btn-danger btn-sm">Eliminar</a>
           </td>
+           <td>
+            <a href="editar.php?id=<?= $p['id'] ?>" class="btn btn-warning btn-sm">Editar</a>
+        </td>
         </tr>
       <?php endforeach; ?>
     </tbody>
