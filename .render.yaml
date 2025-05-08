@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: crud-peliculas
+    env: docker
+    plan: free
